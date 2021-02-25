@@ -1,0 +1,209 @@
+#weightInfo {
+  display: block;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #A9A9A9;
+  border: 1px solid #dddddd;
+  margin: 60px auto;
+	width: 30%;
+	font-size: 20px;
+	border-radius: 25px;
+}
+#headerInfo{
+	margin: 5px;
+}
+#headerInfo-1
+    {
+        float: left;
+    }
+
+#headerInfo-2
+    {
+        overflow: hidden;
+        float: right;
+    }
+#headerInfo-3{
+	margin-left: 42.5%;
+}
+#bodyNumInfo{
+	margin-left: 20px;
+}
+.numInfo{
+	font-size: 30px;
+	font-weight: 900;
+}
+
+#healthRecord {
+  display: block;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #A9A9A9;
+  border: 1px solid #dddddd;
+  margin: 60px auto;
+	width: 30%;
+	font-size: 20px;
+	border-radius: 25px;
+}
+#healthTitle{
+	font-size: 40px;
+	font-weight: 900;
+}
+#kcalLeft{
+	float:left;
+}
+#kcalLeftNum{
+	float:right;
+}
+#bfast{
+	float:left;
+}
+#bfastNum{
+	float:right;
+}
+#lunch{
+	float:left;
+}
+#lunchNum{
+	float:right;
+}
+#dinner{
+	float:left;
+}
+#dinnerNum{
+	float:right;
+}
+#snack{
+	float:left;
+}
+#snackNum{
+	float:right;
+}
+#excr{
+	float:left;
+}
+#excrNum{
+	float:right;
+}
+/*second page priority*/
+.foodKcal{
+	float:right;
+}
+.food{
+	float:left;
+}
+#kcalInfo {
+  display: block;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #A9A9A9;
+  border: 1px solid #dddddd;
+  margin: 60px auto;
+	width: 30%;
+	font-size: 20px;
+	border-radius: 25px;
+}
+#kcalLeft{
+	float:left;
+}
+#kcalLeftNum{
+	float:right;
+}
+#consumed{
+	float:left;
+}
+#consumedNum{
+	float:right;
+}
+#bfastTotal{
+  display: block;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #d3d3d3;
+  border: 1px solid #dddddd;
+  margin: 60px auto;
+	width: 50%;
+	font-size: 20px;
+	border-radius: 25px;
+}
+#bfastTitle{
+	margin:20px auto;
+	font-size: 20px;
+	font-weight: 900;
+	float: left;
+}
+#bfastSuggestion{
+	margin-left: 42.5%;
+	color: #A9A9A9;
+	overflow:hidden;
+}
+#bfastKCal{
+	float:right;
+}
+
+#lunchTotal{
+  display: block;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #d3d3d3;
+  border: 1px solid #dddddd;
+  margin: 60px auto;
+	width: 50%;
+	font-size: 20px;
+	border-radius: 25px;
+}
+#lunchTitle{
+	margin:20px auto;
+	font-size: 20px;
+	font-weight: 900;
+	float: left;
+}
+#lunchSuggestion{
+	margin-left: 42.5%;
+	color: #A9A9A9;
+	overflow:hidden;
+}
+#lunchKCal{
+	float:right;
+}
+#dinnerTotal{
+  display: block;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #d3d3d3;
+  border: 1px solid #dddddd;
+  margin: 60px auto;
+	width: 50%;
+	font-size: 20px;
+	border-radius: 25px;
+}
+#dinnerTitle{
+	margin:20px auto;
+	font-size: 20px;
+	font-weight: 900;
+	float: left;
+}
+#dinnerSuggestion{
+	margin-left: 42.5%;
+	color: #A9A9A9;
+	overflow:hidden;
+}
+#dinnerKCal{
+	float:right;
+}
+#buttonDesc{
+	font-size: 40px;
+	text-decoration: underline;
+	text-align: center;
+}
+.btn{
+	background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px auto;
+  margin-left: 42.5%;
+}
