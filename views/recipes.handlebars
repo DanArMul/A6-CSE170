@@ -1,0 +1,38 @@
+
+<html>
+
+<head>
+	<title>Go Go Diet</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap --> 
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<script src = "js/jquery-1.11.0.js"></script>    
+</head>
+
+<body>
+	<div class= "recipesOfFood">
+		<h1>Here are some recommended recipes: </h1>
+	</div>
+		<ol>
+			{{#each foodRecipes}}
+				<li><a href='#{{id}}'>{{name}}</a></li>
+			{{/each}}
+		</ol>
+
+	<h4>Recipes</h4>
+		
+	{{#each foodRecipes}}
+		<div class="recipe" id="{{id}}">
+			<a href="recipe/{{name}}" class="thumbnail">
+				<img src="img/{{image}}" class="img">
+				<p>{{name}}</p>
+			</a>
+		</div>
+	{{/each}}
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

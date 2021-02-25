@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+</head>
+	
+<style>
+	#form-messages {
+		background-color: rgb(255,232,232);
+		border: 1px solid red;
+		color: red;
+		display: none;
+		font-size: 12px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		padding: 10px 25px;
+		max-width: 250px;
+	}
+</style>
+
+<body>
+	<h1>Login</h1>
+	<div class= "form">
+		<ul id="form-messages">
+		</ul>
+
+		<label for="username">Username</label>
+		<input type = "text" id = "username" spellchecks="false">
+
+		<label for="passowrd">Password</label>
+		<input type = "password" id = "password">
+
+		<button type = "submit" id="btn-submit"> Login </button>
+	</div>
+
+	<script>
+		const form = {
+			username: document.getElementById('username'),
+			password: document.getElementById('password'),
+			submit: document.getElementById('btn-submit'),
+			messages: document.getElementById('form-messages'),
+		}
+
+		form.submit.addEventListener('click', () => {
+			const request = new XMLHttpRequest();
+
+			request.onload = () => {
+				let responseObject = null;
+
+
+				try{
+					responseObject = JSON.parse(request.responseText);
+				} catch (e) {
+					console.error('Could not pass JSON');
+				}
+				if (responseObject){
+					handleResponse(responseObject);
+				}
+			};
+
+			const requestData = `username=${form.username.value}&password=${form.password.value}`;
+			console.log(requestData);
+			request.open('post', 'check-login.php');
+			request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			request.send(requestData);
+		});
+
+
+		function handleResponse(responseObject) {
+			if(responseObject.ok) {
+				location.href = "index";
+			}
+		}
+	</script>
+</body>
+</html>

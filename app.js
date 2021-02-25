@@ -4,9 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var http = require('http');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var methodOverride = require('method-override');
 var exphbs  = require('express-handlebars');
+var exp3hbs  = require('express3-handlebars');
+
+var index = require('./routes/index');
+var usersRouter = require('./routes/users');
+var allRoutes = require('./routes/allRoutes');
+var count = require('./routes/count');
+
 
 var app = express();
 
@@ -15,7 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine(
   "handlebars",
   exphbs({
-    extname: "hbs",
+    extname: "handlebars",
     defaultLayout: false
   })
 );
@@ -25,11 +31,18 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride('X-HTTP-Method-Override'))
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', allRoutes);
 app.use('/users', usersRouter);
 
+if ('development' == app.get('env')) {
+  app.use(createError);
+}
+//add routes
+app.get('/', index.view);
+app.get("/count/:intake",count.viewIntake);
 
 module.exports = app;
 

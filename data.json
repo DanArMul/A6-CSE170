@@ -1,0 +1,21 @@
+{
+  	"foodRecipes": [
+  	{ "name":"Chicken Soup",
+  	"image":"chicken_soup.jpg",
+  	"id":"recipe1"
+  	},
+  	{ "name": "Chow Mein",
+  		"image": "chow_mein.jpg",
+  		"id":"recipe2"
+  	},
+  	{ "name": "Nasi Goreng",
+  		"image": "nasi_goreng.jpg",
+  		"id":"recipe3"
+  	},
+  	{ "name": "Steak",
+  		"image": "steak.jpg",
+  		"id":"recipe4"
+  	}
+  	
+  	]
+}

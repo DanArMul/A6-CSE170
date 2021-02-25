@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calorie Count</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class ="kcalShow">
+      <h1>Your calorie intake should be:</h1>
+      <hr>
+      <h1>{{calorieIntake}}</h1>
+    </div>
+    <form id="addCalorieCount" role="form" method="get" action="/add">
+      <h3>Add a friend</h3>
+        <div class="form-calo">
+          <label for="height">Height (in cm):</label>
+          <input type="number" class="form-control" id="name" placeholder="height" name="height">
+        </div>
+        <div class="form-calo">
+          <label for="weight">Weight (in kg):</label>
+          <input type="number" class="form-control" id="weight" placeholder="weight" name="weight">
+        </div>
+        
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Find your calorie intake!"></input>
+    </form>
+  </body>
+</html>
