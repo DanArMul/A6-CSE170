@@ -6,7 +6,7 @@ var logger = require('morgan');
 var http = require('http');
 var methodOverride = require('method-override');
 var exphbs  = require('express-handlebars');
-var exp3hbs  = require('express3-handlebars');
+
 
 var index = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -42,7 +42,7 @@ if ('development' == app.get('env')) {
 }
 //add routes
 app.get('/', index.view);
-app.get("/count/:intake",count.viewIntake);
+//app.get('/count/:bodyInfo',count.viewIntake); //this code incomplete + makes node app.js startup very long
 
 module.exports = app;
 
